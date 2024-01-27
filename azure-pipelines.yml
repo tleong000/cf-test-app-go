@@ -10,6 +10,12 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: Go@0
+  inputs:
+    command: 'build'
+- task: Go@0
+  inputs:
+    command: 'test'
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
